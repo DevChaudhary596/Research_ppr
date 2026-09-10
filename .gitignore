@@ -18,8 +18,8 @@ checkpoints/*
 !checkpoints/.gitkeep
 
 # Datasets and cache
-data/
-cache/
+/data/
+/cache/
 .cache/
 hf_cache/
 
