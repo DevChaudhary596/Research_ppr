@@ -1,0 +1,39 @@
+# Configuration for Multimodal Inconsistency & Fake News Detection System
+
+model:
+  clip_model_name: "openai/clip-vit-base-patch32"
+  embed_dim: 768
+  num_heads: 8
+  mlp_hidden_dim: 128
+  dropout: 0.2
+  freeze_backbone: true
+
+data:
+  dataset_name: "g-luo/news-clippings"
+  total_samples: 5000
+  train_size: 3500
+  val_size: 750
+  test_size: 750
+  batch_size: 32
+  num_workers: 2
+  max_text_len: 77
+  image_size: 224
+  data_dir: "data"
+
+training:
+  epochs: 5
+  lr: 0.0001
+  weight_decay: 0.01
+  save_dir: "checkpoints"
+  checkpoint_filename: "best_cross_attention_model.pt"
+
+agent:
+  triage_threshold: 0.45
+  search_engine: "tavily"
+  fallback_search_engine: "duckduckgo"
+  max_search_results: 3
+  llm_provider: "gemini"
+  llm_model: "gemini-1.5-flash"
+
+assets:
+  output_dir: "assets"

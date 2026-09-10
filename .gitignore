@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# PyTorch checkpoints and model weights
+*.pt
+*.pth
+*.bin
+*.onnx
+checkpoints/*
+!checkpoints/.gitkeep
+
+# Datasets and cache
+data/
+cache/
+.cache/
+hf_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environment variables & API keys
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# OS artifacts
+Thumbs.db
+.DS_Store
+
+# Evaluation and test outputs
+scratch/
